@@ -17,7 +17,7 @@ Basic ERC20 `ERC20.sol` which is `Initialisable.sol` that is used for initilisat
 
 **Anyone can send ETH to this smart contract to mint the same amount of ERC20 tokens**
 
-`ERC20.sol` should have `mint()` which depends on `msg.value`. Amount obtained with being held by the smart contract, mine ERC20 tokens as `msg.value` and given to `msg.sender`.
+`ERC20.sol` should have `mint()` which depends on `msg.value`. Amount obtained will be held by the smart contract, then mine ERC20 tokens as `msg.value` amount and given to `msg.sender`.
 
 **Have a kill switch that permanently kills upgrade functionality. Only the owner can perform this action.**
 
