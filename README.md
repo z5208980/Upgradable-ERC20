@@ -8,15 +8,19 @@ Most of the smart contract is based on Openzeppelin's implementation. The roles 
 
 ### General Information
 **Have an owner account that can upgrade the smart contract**
+
 Ownership of the contract is managed in `Proxy.sol`. For this I've implemented getters `getProxyOwner()` and setters `setProxyOwnership(address)` for simple transfer of owner account that can **only** be made by the current proxy owner.
 
 **Implements ERC20**
+
 Basic ERC20 `ERC20.sol` which is `Initialisable.sol` that is used for initilisation of constructor `intilise()` instead of regularly `constructor`.
 
 **Anyone can send ETH to this smart contract to mint the same amount of ERC20 tokens**
+
 `ERC20.sol` should have `mint()` which depends on `msg.value`. Amount obtained with being held by the smart contract, mine ERC20 tokens as `msg.value` and given to `msg.sender`.
 
 **Have a kill switch that permanently kills upgrade functionality. Only the owner can perform this action.**
+
 In `Proxy.sol`. Simple `bool` variable is stored with the method `upgradeKill()` that can only be called **once** and by proxy owner.
 
 **Deploy this smart contract to Kovan testnet**
@@ -30,6 +34,7 @@ In `Proxy.sol`. Simple `bool` variable is stored with the method `upgradeKill()`
 - **Transaction**:  [Etherscan tx](https://kovan.etherscan.io/tx/0x0c9d871cc1d6b079912a50a361dc542701a1d9ca6a9c4668bc036ff71e38f935)
 
 **Upgrade the smart contract to add a feature that allow user to burn ERC20 token and get 90% of the ETH back**
+
 The upgrade of the ERC20 token occurs in the `Proxy.sol` using `upgradeTo(address)` that takes in the ERC20 address implementations. For this case, a new ERC20 called `ERC20V2.sol` will be the upgraded contract that gets implemented in the proxy that has the addition `burn(address, amount)` to burn the ERC20 and receive 90% of the burnt value back in ETH.
 
 **Submit all the relevant code, including pre-upgraded contract and all the executed transactions' hash, preferably etherscan links to the transactions**
