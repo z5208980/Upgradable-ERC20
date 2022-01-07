@@ -44,6 +44,6 @@ The upgrade of the ERC20 token occurs in the `Proxy.sol` using `upgradeTo(addres
 -   Transaction performs upgrade [Etherscan tx](https://kovan.etherscan.io/tx/0xc077e2b42d25eaf697b0cabb6d1ded6f095cddc547b029159492b89f7583237f)
 -   Transaction performs kill switch
     -  [Etherscan tx](https://kovan.etherscan.io/tx/0x372532cd24d839b0bc2bf26a39c83cad4bc416f449051315b1deb62a94ac5dc5)
-    - Force upgrade another ERC20 implementation fail: [Etherscan tx](https://kovan.etherscan.io/tx/0x372532cd24d839b0bc2bf26a39c83cad4bc416f449051315b1deb62a94ac5dc5)
+    - Force upgrade another ERC20 implementation fail: [Etherscan tx](https://kovan.etherscan.io/tx/0x566d844e6a151d494239d8fef067b4899e005c64aa02f37e9f0ab220246ca6b9)
 -   Transaction that burn ERC20 token and receive ETH [Etherscan tx](https://kovan.etherscan.io/tx/0xf59fb0ab24a6b33e8e0e63ee5415348be2b56fb93480e62dd1e7ef0a2fb06279)
     - 0.05 ERC20 => 0.045 ETH (the 0.005 ETH remains in smart contract) 
